@@ -10,6 +10,7 @@ import 'package:practice/cubits/get_weather_cubit/get_weather_cubit.dart';
 import 'package:practice/firebase_options.dart';
 import 'package:practice/news/new.dart';
 import 'package:practice/news/service.dart';
+import 'package:practice/notes_app/note_home.dart';
 import 'package:practice/screens/lale.dart';
 import 'package:practice/ppp.dart';
 import 'package:practice/bd.dart';
@@ -37,12 +38,16 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+
     return  MaterialApp(
-       routes: {
-    UpdateProduct.id : (context)=> UpdateProduct(),
-    },
       debugShowCheckedModeBanner: false,
-      home: StoreApp(),
+      theme: ThemeData(brightness: Brightness.dark,fontFamily: 'Agbalumo'),
+
+
+      routes: {
+    UpdateProduct.id : (context)=> const UpdateProduct(),
+    },
+      home: const NoteHome(),
     );
 
 
