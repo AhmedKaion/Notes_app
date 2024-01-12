@@ -6,13 +6,13 @@ class PureTextField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const TextField(
+    return TextField(
       cursorColor: kPrimaryColor,
       decoration: InputDecoration(
 
         hintText: 'Title',
-        enabledBorder: ,
-        focusedBorder: ,
+        enabledBorder:buildBorder(),
+        focusedBorder:buildBorder(),
         border: buildBorder(),
       ),
     );
@@ -20,10 +20,10 @@ class PureTextField extends StatelessWidget {
 
   OutlineInputBorder buildBorder() {
     return OutlineInputBorder(
-        borderRadius: BorderRadius.all(Radius.circular(16)),
-        borderSide: BorderSide(
-          color: Colors.white,
-        ),
+      borderRadius: BorderRadius.all(Radius.circular(16)),
+      borderSide: BorderSide(
+        color: Colors.white,
+      ),
     );
   }
 }

@@ -22,15 +22,13 @@ import 'package:practice/tune/tunes.dart';
 import 'package:dio/dio.dart';
 import 'package:practice/weather/home.dart';
 
-
-  void main() async {
-    WidgetsFlutterBinding.ensureInitialized();
-    await Firebase.initializeApp(
-      options: DefaultFirebaseOptions.currentPlatform,
-    );
-    runApp(const MyApp());
-  }
-
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+  runApp(const MyApp());
+}
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -38,33 +36,26 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-
-    return  MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(brightness: Brightness.dark,fontFamily: 'Agbalumo'),
-
-
+      theme: ThemeData(brightness: Brightness.dark, fontFamily: 'Arial'),
       routes: {
-    UpdateProduct.id : (context)=> const UpdateProduct(),
-    },
+        UpdateProduct.id: (context) => const UpdateProduct(),
+      },
       home: const NoteHome(),
     );
-
-
-
   }
 }
 //   'Login' :(context) => Login(),
 //   'Sign up' :(context) => Register(),
 //   ChatPage.id :(context) => ChatPage(),
-  // Widget build(BuildContext context) {
-  //   return BlocProvider(
-  //       create: (context) => GetWeatherCubit(),
-  //       child: MaterialApp(
-  //         debugShowCheckedModeBanner: false,
-  //         theme: ThemeData(
-  //           primarySwatch: Colors.cyan,
-  //         ),
-  //         home:  Home(),
-  //       ));
-
+// Widget build(BuildContext context) {
+//   return BlocProvider(
+//       create: (context) => GetWeatherCubit(),
+//       child: MaterialApp(
+//         debugShowCheckedModeBanner: false,
+//         theme: ThemeData(
+//           primarySwatch: Colors.cyan,
+//         ),
+//         home:  Home(),
+//       ));
